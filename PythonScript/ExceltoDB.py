@@ -32,16 +32,6 @@ with engine.begin() as conn:
         df.to_sql(table_name,con=engine,if_exists="append",index=False)
 
         print(f"{file_name} is updated in the table called {table_name}")
-data.to_excel("Data.xlsx", index=False)
-content = "Data.xlsx"
-email = yagmail.SMTP(
-    user="satyarajesh566@gmail.com", password="njyn yqul cbxd eiuf"
-        )
 
-email.send(
-            to="veeravillisatyarajesh@gmail.com",
-            subject="task receiving check",
-            contents=content
-        )
 print("All tables successfully importated")
 
